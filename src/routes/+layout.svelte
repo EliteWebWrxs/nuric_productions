@@ -3,6 +3,31 @@
 	import '$lib/css/reset.css';
 	import '$lib/css/styles.css';
 	import logo from '$lib/images/logo.webp';
+
+	// add class to body based on pathname strip the / remove all other classes
+	$effect(() => {
+		document.body.classList.add(data.pathname.replace('/', ''));
+		document.body.classList.remove(
+			...document.body.classList
+				.toArray()
+				.filter((className) => className !== data.pathname.replace('/', ''))
+		);
+	});
+
+	const routes = [
+		{
+			label: 'DJ Services',
+			href: '/dj'
+		},
+		{
+			label: 'Photo Booth',
+			href: '/photobooth'
+		},
+		{
+			label: 'Contact Us',
+			href: '/contact'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -20,6 +45,13 @@
 			<img src={logo} alt="logo" />
 		</a>
 	</div>
+	<nav>
+		<ul>
+			{#each routes as route}
+				<li><a href={route.href}>{route.label}</a></li>
+			{/each}
+		</ul>
+	</nav>
 </header>
 
 <div>
@@ -28,9 +60,33 @@
 
 <style>
 	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		padding: 2rem;
 	}
 	.logoContainer {
 		width: 150px;
+	}
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		ul {
+			display: flex;
+			gap: 2rem;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				margin: 0;
+				padding: 0;
+				font-size: clamp(1.2rem, 2vw, 1.5rem);
+				a {
+					text-decoration: none;
+					color: #fff;
+				}
+			}
+		}
 	}
 </style>
