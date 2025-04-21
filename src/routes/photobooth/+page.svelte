@@ -8,6 +8,11 @@
 			photo booths. Our photo booth packages are perfect for weddings, birthdays, corporate events,
 			and more.
 		</p>
+		<ul>
+			<li>Digital Share Photo booth with ability to to print</li>
+			<li>360 Photo Booth</li>
+			<li>Video guest card for weddings or guest reactions</li>
+		</ul>
 	</div>
 </div>
 

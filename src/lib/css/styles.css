@@ -16,6 +16,9 @@ body {
 a {
 	cursor: pointer;
 }
+p {
+	text-shadow: 1px 1px 0 #000;
+}
 
 .container {
 	width: calc(100% - 4rem);
@@ -26,4 +29,12 @@ a {
 .pageTitle {
 	margin-bottom: 3rem;
 	text-decoration: underline;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.center {
+	text-align: center;
 }
