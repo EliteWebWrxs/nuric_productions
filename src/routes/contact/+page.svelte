@@ -8,6 +8,7 @@
 		name: '',
 		email: '',
 		phone: '',
+		service: '',
 		message: ''
 	};
 
@@ -29,6 +30,7 @@
 					name: '',
 					email: '',
 					phone: '',
+					service: '',
 					message: ''
 				};
 				setTimeout(() => {
@@ -80,6 +82,15 @@
 					use:imask={maskConfig}
 					bind:value={formData.phone}
 				/>
+			</div>
+			<div class="formGroup">
+				<label for="service">Services Needed</label>
+				<select id="service" name="service">
+					<option value="" disabled selected>Select Service</option>
+					<option value="dj">DJ</option>
+					<option value="photobooth">Photo Booth</option>
+					<option value="both dj and photobooth">Both</option>
+				</select>
 			</div>
 
 			<div class="formGroup">

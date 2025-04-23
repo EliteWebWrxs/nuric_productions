@@ -17,18 +17,19 @@ export const actions = {
 			const name = formData.get('name');
 			const email = formData.get('email');
 			const phone = formData.get('phone');
+			const service = formData.get('service');
 			const message = formData.get('message');
 
 			// Email options
 			const mailOptions = {
 				from: env.GOOGLE_EMAIL,
-				to: 'mike@bigbearded.dev', // Send to yourself
+				to: 'nuricproductionsdj@yahoo.com', // Send to yourself
 				subject: `New Contact Form Submission from ${name}`,
 				text: `
 					Name: ${name}
 					Email: ${email}
 					Phone: ${phone || 'Not provided'}
-					
+					Service: ${service || 'Not provided'}
 					Message:
 					${message}
 				`,
@@ -37,6 +38,7 @@ export const actions = {
 					<p><strong>Name:</strong> ${name}</p>
 					<p><strong>Email:</strong> ${email}</p>
 					<p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+					<p><strong>Service:</strong> ${service || 'Not provided'}</p>
 					<h3>Message:</h3>
 					<p>${message}</p>
 				`
