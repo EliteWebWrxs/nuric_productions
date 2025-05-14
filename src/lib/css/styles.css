@@ -24,6 +24,12 @@ p {
 	width: calc(100% - 4rem);
 	max-width: 1200px;
 	margin: 0 auto;
+	min-height: calc(100vh - (265px + 3rem));
+}
+footer {
+	height: 60px;
+	padding: 0;
+	margin: 3rem 0 0;
 }
 
 .pageTitle {

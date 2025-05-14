@@ -44,7 +44,7 @@
 		font-family: 'Roboto', sans-serif;
 		display: grid;
 		place-items: center;
-		height: calc(100vh - 350px);
+		height: calc(100vh - 275px);
 	}
 	.heroContent {
 		text-align: right;
@@ -75,7 +75,7 @@
 			background-clip: text;
 			-webkit-text-fill-color: transparent;
 			color: #fff;
-			animation: textGradientShine 12s ease-in-out infinite;
+			animation: textGradientShine 8s ease-in-out infinite;
 		}
 		p {
 			font-size: clamp(1.8rem, 4vw, 3.5rem);

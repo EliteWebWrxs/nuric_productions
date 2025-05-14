@@ -2,6 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { enhance } from '$app/forms';
 	import { imask } from 'svelte-imask';
+	import facebook from '$lib/images/facebook.svg';
 	const maskConfig = { mask: '(000) 000-0000' };
 
 	let formData = {
@@ -103,6 +104,14 @@
 				{status.submitting ? 'Sending...' : 'Send Message'}
 			</button>
 		</form>
+
+		<div class="serviceArea">
+			<h3>Service Area:</h3>
+			<p>
+				Our service areas include Tampa south to Venice, North to Gainesville , East to Orlando and
+				all of Pinellas, Pasco, Hernando, and Polk County
+			</p>
+		</div>
 	</div>
 </div>
 
@@ -145,8 +154,12 @@
 		}
 	}
 	input,
-	textarea {
+	textarea,
+	select {
 		font-size: 1.6rem;
 		padding: 0.5rem 1rem;
+	}
+	.serviceArea {
+		margin: 1rem auto 3rem;
 	}
 </style>
